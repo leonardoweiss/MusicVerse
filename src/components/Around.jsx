@@ -8,6 +8,8 @@ import { useState } from "react";
 
 export default function Around({ sound }) {
 
+    localStorage.setItem('indexNow', 0)
+
     const [queue, setQueue] = useState([localStorage.getItem('indexNow')])
     const [current, setCurrent] = useState(sound.data[queue])
 
