@@ -1,0 +1,334 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+body {
+  background-color: #0a0a0a;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+header {
+  margin: 2rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 12rem;
+  border-radius: 18px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+header h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 60px;
+  color: #fed966;
+}
+header h2::before {
+  position: absolute;
+  content: "";
+  display: block;
+  right: 120px;
+  background-image: url("../images/logo-yellow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+}
+header a {
+  margin: 0 1.5rem;
+  color: #fed966;
+  text-decoration: none;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+header a:hover {
+  border-bottom: 2px solid #fed966;
+}
+header button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #fed966;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 2rem;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+header button:hover {
+  background-color: #fed966;
+  color: #252525;
+}
+header #signUp {
+  background-color: rgba(177, 255, 113, 0.75);
+  color: #000;
+}
+header #signUp:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+main {
+  display: flex;
+  margin: 3rem 5rem;
+}
+main section, main aside {
+  height: 70vh;
+  padding: 1rem;
+  border-radius: 18px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 0.5rem;
+}
+main #reproduction-list {
+  flex-grow: 0;
+}
+main #reproduction-list input {
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(255, 229, 154, 0.1);
+  color: #fff;
+}
+main #reproduction-list input:focus, main #reproduction-list input:active {
+  outline: 0;
+}
+main #reproduction-list input::placeholder {
+  color: #fff;
+}
+main #reproduction-list h1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+main #reproduction-list .queue {
+  overflow: auto;
+  height: 84%;
+}
+main #reproduction-list .queue::-webkit-scrollbar {
+  width: 0px;
+}
+main #reproduction-list .queue .card-queue {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+main #reproduction-list .queue .card-queue:hover {
+  background-color: rgba(255, 229, 154, 0.5);
+}
+main #reproduction-list .queue .card-queue img {
+  border-radius: 8px;
+  margin-right: 1rem;
+}
+main #reproduction-list .queue .card-queue p {
+  color: #fff;
+  font-weight: bold;
+}
+main #feed {
+  flex-grow: 6;
+}
+main #feed h1 {
+  color: #fff;
+}
+main #feed #personal {
+  display: flex;
+  margin-top: 1rem;
+}
+main #feed #personal div {
+  cursor: pointer;
+  text-align: center;
+  width: 30%;
+  padding: 10px 14px;
+  margin: 1rem;
+  border-radius: 6px;
+}
+main #feed #personal div:nth-child(1n) {
+  background-color: rgba(177, 255, 113, 0.5);
+}
+main #feed #personal div:nth-child(2n) {
+  background-color: rgba(255, 229, 154, 0.5);
+}
+main #feed #personal div:nth-child(3n) {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+main #feed #personal div:hover {
+  background-color: #000;
+}
+main #feed #personal div i {
+  margin-right: 1rem;
+}
+main #feed #artists div, main #feed #albuns div {
+  display: flex;
+}
+main #feed #artists div .cards, main #feed #albuns div .cards {
+  background-image: linear-gradient(rgba(177, 255, 113, 0.5), rgba(113, 255, 255, 0.5));
+  width: 25%;
+  height: 14rem;
+  margin: 0.5rem;
+  border-radius: 6px;
+  padding: 20px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+main #feed #artists div .cards img, main #feed #albuns div .cards img {
+  border-radius: 10px;
+}
+main #feed #artists div .cards p, main #feed #albuns div .cards p {
+  color: #000;
+  font-weight: bold;
+}
+main #feed #artists div .yellow, main #feed #albuns div .yellow {
+  background-color: rgba(255, 229, 154, 0.5);
+}
+main #music-info {
+  flex-grow: 1;
+}
+main #music-info .center {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  border-radius: 12px;
+  margin: 0.5rem;
+}
+main #music-info .center img {
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+main #music-info .center h3 {
+  max-width: 400px;
+  margin: 0 auto;
+}
+main #music-info .artist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem;
+}
+main #music-info .artist .info-artist {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 229, 154, 0.5);
+  padding: 0.45rem;
+  width: 50%;
+  border-radius: 12px;
+  margin-right: 0.5rem;
+  height: 70px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+main #music-info .artist .info-artist img {
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+main #music-info .artist .deezer {
+  border: 1px solid rgba(255, 229, 154, 0.5);
+  display: flex;
+  width: 50%;
+  padding: 0.45rem;
+  border-radius: 12px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+}
+main #music-info .artist .deezer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #252525;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  border-radius: 10px 10px 0 0;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer #infos {
+  display: flex;
+  align-items: center;
+}
+footer #infos img {
+  border-radius: 6px;
+  margin-right: 0.5rem;
+}
+footer #infos h5 {
+  color: #ffe59a;
+}
+footer #infos p {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+footer #infos, footer #player, footer #actions-play {
+  width: 33%;
+}
+footer #player #btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+footer #player #btns button {
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 1.3rem;
+  color: #fed966;
+}
+footer #player #btns .play {
+  color: #252525;
+  background-color: #fed966;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+footer #player #btns .repeat, footer #player #btns .random {
+  font-size: 0.85rem;
+  color: rgba(255, 229, 154, 0.8);
+}
+footer #actions-play {
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  align-self: self-end;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+footer #actions-play a {
+  color: #000;
+  margin: 0 2rem;
+}
+footer #actions-play button {
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 0 1rem;
+  color: #fed966;
+  font-size: 1.1rem;
+}
+
+/*# sourceMappingURL=globals.css.map */

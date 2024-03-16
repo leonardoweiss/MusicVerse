@@ -1,0 +1,21 @@
+{
+  "name": "e-commerce",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "json-server": "^1.0.0-alpha.23",
+    "next": "14.1.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-fontawesome": "^1.7.1"
+  }
+}
