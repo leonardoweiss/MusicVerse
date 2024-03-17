@@ -12,6 +12,19 @@ body {
   color: #fff;
 }
 
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 229, 154, 0.5);
+  border-radius: 20px;
+}
+
 header {
   margin: 2rem 2rem;
   display: flex;
