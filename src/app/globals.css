@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  margin: 2rem 5rem;
+  margin: 2rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,6 +23,17 @@ header {
   -webkit-backdrop-filter: blur(3px);
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+header button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #fed966;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 2rem;
+  padding: 8px 20px;
+  border-radius: 20px;
 }
 header h2 {
   display: flex;
@@ -53,45 +64,38 @@ header a {
 header a:hover {
   border-bottom: 2px solid #fed966;
 }
-header button {
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  color: #fed966;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  margin: 0 2rem;
-  padding: 8px 20px;
-  border-radius: 20px;
-}
-header button:hover {
+header #actions button:hover {
   background-color: #fed966;
   color: #252525;
 }
-header #signUp {
+header #actions #signUp {
   background-color: rgba(177, 255, 113, 0.75);
   color: #000;
 }
-header #signUp:hover {
+header #actions #signUp:hover {
   background-color: rgba(255, 255, 255, 0.75);
+}
+header #menu {
+  display: none;
 }
 
 main {
   display: flex;
-  margin: 3rem 5rem;
+  margin: 2rem 2rem 6rem 2rem;
+  gap: 0.75rem;
 }
 main section, main aside {
-  height: 70vh;
   padding: 1rem;
   border-radius: 18px;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(3px);
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-  margin: 0 0.5rem;
 }
 main #reproduction-list {
   flex-grow: 0;
+  height: 70vh;
+  padding-bottom: 3rem;
 }
 main #reproduction-list input {
   width: 100%;
@@ -166,7 +170,9 @@ main #feed #personal div:nth-child(3n) {
   background-color: rgba(255, 255, 255, 0.5);
 }
 main #feed #personal div:hover {
-  background-color: #000;
+  transition: 0.3s;
+  color: #439400;
+  background-color: #fff;
 }
 main #feed #personal div i {
   margin-right: 1rem;
@@ -177,6 +183,7 @@ main #feed #artists div, main #feed #albuns div {
 main #feed #artists div .cards, main #feed #albuns div .cards {
   background-image: linear-gradient(rgba(177, 255, 113, 0.5), rgba(113, 255, 255, 0.5));
   width: 25%;
+  min-width: fit-content;
   height: 14rem;
   margin: 0.5rem;
   border-radius: 6px;
@@ -186,6 +193,10 @@ main #feed #artists div .cards, main #feed #albuns div .cards {
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  cursor: pointer;
+}
+main #feed #artists div .cards:hover, main #feed #albuns div .cards:hover {
+  background-image: linear-gradient(rgba(51, 255, 0, 0.5), rgba(105, 170, 255, 0.5));
 }
 main #feed #artists div .cards img, main #feed #albuns div .cards img {
   border-radius: 10px;
@@ -219,6 +230,7 @@ main #music-info .artist {
   justify-content: space-between;
   align-items: center;
   margin: 0.5rem;
+  gap: 0.5rem;
 }
 main #music-info .artist .info-artist {
   display: flex;
@@ -227,7 +239,6 @@ main #music-info .artist .info-artist {
   padding: 0.45rem;
   width: 50%;
   border-radius: 12px;
-  margin-right: 0.5rem;
   height: 70px;
   font-size: 1.1rem;
   font-weight: bold;
@@ -329,6 +340,75 @@ footer #actions-play button {
   margin: 0 1rem;
   color: #fed966;
   font-size: 1.1rem;
+}
+
+@media screen and (max-width: 1450px) {
+  main {
+    flex-direction: column-reverse;
+  }
+  main #music-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  main #music-info .artist {
+    flex-direction: column;
+    width: fit-content;
+    gap: 5rem;
+  }
+  main #music-info .artist .info-artist, main #music-info .artist .deezer {
+    width: 33vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  header {
+    padding: 1.5rem;
+    justify-content: space-between;
+  }
+  #music-info {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 750px) {
+  header #actions {
+    display: none;
+  }
+  header #menu {
+    display: block;
+    position: relative;
+  }
+  header #menu:hover::before {
+    position: relative;
+    content: "Perfil";
+    left: 59px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  header #menu:hover::after {
+    position: relative;
+    content: "Cadastre-se";
+    left: 49px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  #music-info .center img {
+    width: 350px;
+    height: 350px;
+  }
+  #feed #personal {
+    justify-content: center;
+  }
+  #feed #personal .radio {
+    display: none;
+  }
+  #feed #artists .cards-parent, #feed #albuns .cards-parent {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer .back, footer .repeat, footer .random, footer #actions-play {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=globals.css.map */

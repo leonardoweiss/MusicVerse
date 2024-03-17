@@ -35,13 +35,13 @@ function Feed({ music }) {
                 <div>
                     <i className="fa-solid fa-music"></i> Playlists
                 </div>
-                <div>
+                <div className="radio">
                     <i className="fa-solid fa-radio"></i> Rádio
                 </div>
             </article>
             <article id="artists">
                 <h3>Artistas</h3>
-                <div>
+                <div className="cards-parent">
                     {artistsList.map(a => (
                         <div className="cards" key={a.name}>
                             <Image src={a.img} width={125} height={125} alt={a.name} />
@@ -52,7 +52,7 @@ function Feed({ music }) {
             </article>
             <article id="albuns">
                 <h3>Álbuns</h3>
-                <div>
+                <div className="cards-parent">
                     {albunsList.map(a => (
                         <div className="cards yellow" key={a.title}>
                             <Image src={a.img} width={125} height={125} alt={a.title} />

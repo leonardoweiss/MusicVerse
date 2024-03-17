@@ -1,8 +1,6 @@
 "use client"
 import Image from "next/image"
 
-const queue = localStorage.getItem('indexNow')
-
 function Infos({value}) {
     return(
         <aside id="music-info">
@@ -10,7 +8,7 @@ function Infos({value}) {
                 <Image src={value.album.cover_big} width={450} height={450} alt={value.title} />
                 <h3>{value.title} - {value.album.title}</h3>
             </div>
-            <div>
+            <div className="info-down">
                 <div className="artist">
                     <div className="info-artist">
                         <Image src={value.artist.picture_xl} priority={true} width={60} height={60} alt={value.artist.name} />
