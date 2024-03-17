@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { useState } from "react"
 
-function ReproductionList({music, def, playing}) {
+function ReproductionList({music, def, playing, setQueue, queue}) {
 
     const {value, setValue} = useState('')
 
@@ -14,8 +14,7 @@ function ReproductionList({music, def, playing}) {
             <div className="queue">
                 {music.data.map((m, i) => (
                     <div className="card-queue" key={m.id} onClick={() => {
-                        localStorage.setItem('indexNow', i)
-                        def(music.data[localStorage.getItem('indexNow')])
+                        def(music.data[i])
                         playing.pause()
                     }}>
                         <Image src={m.album.cover_small} width={40} height={40} alt={m.title} />
