@@ -1,7 +1,7 @@
 import Around from "@/components/Around";
 import { use } from "react"
 
-const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${"hulvey"}`
+const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${"shawn"}`
 const options = {
   method: 'GET',
   headers: {
