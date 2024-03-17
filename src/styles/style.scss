@@ -282,6 +282,7 @@ main{
 
             .info-artist{
                 display: flex;
+                justify-content: center;
                 align-items: center;
                 border: 1px solid rgba(255, 229, 154, 0.5);
                 padding: 0.45rem;
@@ -426,14 +427,14 @@ footer{
                 gap: 5rem;
 
                 .info-artist, .deezer{
-                    width: 33vw;
+                    width: 40vw;
                 }
             }
         }
     }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1100px){
     header{
         padding: 1.5rem;
         justify-content: space-between;
@@ -476,8 +477,15 @@ footer{
 
     #music-info{
         .center img{
-            width: 350px;
-            height: 350px;
+            width: 300px;
+            height: 300px;
+        }
+
+        .artist{
+
+            .info-artist, .deezer{
+                border: 1px solid red;
+            }
         }
     }
     
