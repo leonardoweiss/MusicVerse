@@ -5,11 +5,9 @@ import { useState } from "react"
 
 function ReproductionList({music, def, playing, setQueue}) {
 
-    const {value, setValue} = useState('')
-
     return(
         <section id="reproduction-list">
-            <input type="text" placeholder="Buscar..." value={value}/>
+            <input type="text" placeholder="Buscar..."/>
             <h1>Fila</h1>
             <div className="queue">
                 {music.data.map((m, i) => (

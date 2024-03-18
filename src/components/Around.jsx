@@ -11,16 +11,14 @@ export default function Around({ sound }) {
     const [queue, setQueue] = useState(0)
     const [current, setCurrent] = useState(sound.data[0])
 
-    const play = new Audio(current.preview)
-
     return(
         <>
             <main>
-                <ReproductionList music={sound} value={current} def={setCurrent} playing={play} setQueue={setQueue}/>
+                <ReproductionList music={sound} value={current} def={setCurrent} setQueue={setQueue}/>
                 <Feed music={sound}/>
                 <Infos value={current} />
             </main>
-            <Footer music={sound} def={setCurrent} value={current} playing={play} queue={queue} setQueue={setQueue}/>
+            <Footer music={sound} def={setCurrent} value={current} queue={queue} setQueue={setQueue}/>
         </>
     )
 }
