@@ -364,12 +364,12 @@ footer #actions-play button {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 0;
   }
   main #music-info .artist {
     flex-direction: column;
     width: fit-content;
-    gap: 5rem;
+    gap: 1rem;
   }
   main #music-info .artist .info-artist, main #music-info .artist .deezer {
     width: 40vw;
@@ -382,6 +382,12 @@ footer #actions-play button {
   }
   #music-info {
     flex-direction: column;
+  }
+  #music-info .artist {
+    gap: 2rem;
+  }
+  #music-info .artist .info-artist, #music-info .artist .deezer {
+    width: 40vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -418,6 +424,9 @@ footer #actions-play button {
   }
   #feed #personal .radio {
     display: none;
+  }
+  #feed #artists h3, #feed #albuns h3 {
+    text-align: center;
   }
   #feed #artists .cards-parent, #feed #albuns .cards-parent {
     flex-wrap: wrap;

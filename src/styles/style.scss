@@ -432,12 +432,12 @@ footer{
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 3rem;
+            gap: 0;
 
             .artist{
                 flex-direction: column;
                 width: fit-content;
-                gap: 5rem;
+                gap: 1rem;
 
                 .info-artist, .deezer{
                     width: 40vw;
@@ -454,7 +454,15 @@ footer{
     }
 
     #music-info{
-        flex-direction: column
+        flex-direction: column;
+
+        .artist{
+            gap: 2rem;
+
+            .info-artist, .deezer{
+                width: 40vw;
+            }
+        }
     }
 }
 
@@ -467,8 +475,6 @@ footer{
         #menu{
             display: block;
             position: relative;
-
-            
 
             &:hover::before{
                 position: relative;
@@ -510,6 +516,10 @@ footer{
             }
         }
         #artists, #albuns{
+
+            h3{
+                text-align: center;
+            }
 
             .cards-parent{
                 flex-wrap: wrap;
