@@ -436,11 +436,11 @@ footer{
 
             .artist{
                 flex-direction: column;
-                width: fit-content;
+                width: 60vw;
                 gap: 1rem;
 
                 .info-artist, .deezer{
-                    width: 40vw;
+                    width: 100%;
                 }
             }
         }
@@ -458,6 +458,7 @@ footer{
 
         .artist{
             gap: 2rem;
+            width: 90vw;
 
             .info-artist, .deezer{
                 width: 40vw;
@@ -499,13 +500,6 @@ footer{
             width: 300px;
             height: 300px;
         }
-
-        .artist{
-
-            .info-artist, .deezer{
-                border: 1px solid red;
-            }
-        }
     }
     
     #feed{
@@ -519,6 +513,8 @@ footer{
 
             h3{
                 text-align: center;
+                margin: 1rem 0;
+                font-size: 1.3rem;
             }
 
             .cards-parent{
