@@ -240,8 +240,9 @@ main #music-info .center h3 {
 }
 main #music-info .artist {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  max-width: 45vw;
   margin: 0.5rem;
   gap: 0.5rem;
 }
@@ -250,8 +251,7 @@ main #music-info .artist .info-artist {
   justify-content: center;
   align-items: center;
   border: 1px solid rgba(255, 229, 154, 0.5);
-  padding: 0.45rem;
-  width: 50%;
+  padding: 1.5rem;
   border-radius: 12px;
   height: 70px;
   font-size: 1.1rem;
@@ -264,8 +264,7 @@ main #music-info .artist .info-artist img {
 main #music-info .artist .deezer {
   border: 1px solid rgba(255, 229, 154, 0.5);
   display: flex;
-  width: 50%;
-  padding: 0.45rem;
+  padding: 1.5rem;
   border-radius: 12px;
   height: 70px;
   justify-content: center;
@@ -434,6 +433,12 @@ footer #actions-play button {
   }
   footer .back, footer .repeat, footer .random, footer #actions-play {
     display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  #music-info .center img {
+    width: 200px;
+    height: 200px;
   }
 }
 
