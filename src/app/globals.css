@@ -110,19 +110,39 @@ main #reproduction-list {
   height: 70vh;
   padding-bottom: 3rem;
 }
-main #reproduction-list input {
+main #reproduction-list #input {
+  display: flex;
+}
+main #reproduction-list #input input {
   width: 100%;
   padding: 0.75rem 0.5rem;
   border: none;
   border-radius: 10px;
   background-color: rgba(255, 229, 154, 0.1);
   color: #fff;
+  margin-right: 8px;
 }
-main #reproduction-list input:focus, main #reproduction-list input:active {
+main #reproduction-list #input input:focus, main #reproduction-list #input input:active {
   outline: 0;
 }
-main #reproduction-list input::placeholder {
+main #reproduction-list #input input::placeholder {
   color: #fff;
+}
+main #reproduction-list #input input::after {
+  content: "GO!";
+  position: relative;
+  z-index: 0;
+}
+main #reproduction-list #input button {
+  background-color: rgba(255, 229, 154, 0.1);
+  border: none;
+  color: #fed966;
+  padding: 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+main #reproduction-list #input button:hover {
+  background-color: rgba(255, 218, 106, 0.37);
 }
 main #reproduction-list h1 {
   margin-top: 1rem;

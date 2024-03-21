@@ -1,12 +1,24 @@
 "use client"
 
+
 import Image from "next/image"
+import { useRef } from "react"
 
 function ReproductionList({music, def, setQueue, playRef, setBtn}) {
 
+    const inputRef = useRef()
+
     return(
         <section id="reproduction-list">
-            <input type="text" placeholder="Buscar..."/>
+            <form id="input" onSubmit={(ev) => {
+                ev.preventDefault()
+                inputRef.current.value = ''
+            }}>
+                <input type="text" ref={inputRef} placeholder="Buscar..."/>
+                <button>
+                    <i className="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
             <h1>Fila</h1>
             <div className="queue">
                 {music.data.map((m, i) => (

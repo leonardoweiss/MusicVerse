@@ -71,7 +71,7 @@ function Footer({music, def, value, queue, setQueue, playRef, btn, setBtn}) {
                     <i className={mutedBtn}></i>
                 </button>
                 <button type="button">
-                    <i class="fa-regular fa-heart"></i>
+                    <i className="fa-regular fa-heart"></i>
                 </button>
             </div>
         </footer>
