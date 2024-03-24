@@ -12,8 +12,7 @@ export default function Around({ sound }) {
     const [current, setCurrent] = useState(sound.data[0])
     const [btn, setBtn] = useState('fa-solid fa-play')
     const playRef = useRef()
-
-
+    
     return(
         <>
             <main>

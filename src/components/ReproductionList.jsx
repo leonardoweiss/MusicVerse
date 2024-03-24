@@ -1,6 +1,5 @@
 "use client"
 
-
 import Image from "next/image"
 import { useRef } from "react"
 
@@ -10,11 +9,17 @@ function ReproductionList({music, def, setQueue, playRef, setBtn}) {
 
     return(
         <section id="reproduction-list">
-            <form id="input" onSubmit={(ev) => {
-                ev.preventDefault()
+            <form id="input" onSubmit={() => {
+                fetch('http://localhost:3000/search', {
+                    method: 'POST',
+                    body: JSON.stringify(inputRef.current.value),
+                    headers: {
+                        "Content-type": "application/json; charset=UTF-8"
+                    }
+                })
                 inputRef.current.value = ''
             }}>
-                <input type="text" ref={inputRef} placeholder="Buscar..."/>
+                <input type="text" name="search" autoComplete="off" ref={inputRef} placeholder="Buscar..."/>
                 <button>
                     <i className="fa-solid fa-magnifying-glass"></i>
                 </button>

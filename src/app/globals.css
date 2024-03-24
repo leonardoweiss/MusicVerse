@@ -108,6 +108,7 @@ main section, main aside {
 main #reproduction-list {
   flex-grow: 0;
   height: 70vh;
+  max-width: 450px;
   padding-bottom: 3rem;
 }
 main #reproduction-list #input {
@@ -243,6 +244,7 @@ main #feed #artists div .yellow, main #feed #albuns div .yellow {
 }
 main #music-info {
   flex-grow: 1;
+  max-width: 600px;
 }
 main #music-info .center {
   text-align: center;
@@ -379,11 +381,15 @@ footer #actions-play button {
   main {
     flex-direction: column-reverse;
   }
+  main #reproduction-list {
+    max-width: 10000px;
+  }
   main #music-info {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0;
+    max-width: 10000px;
   }
   main #music-info .artist {
     flex-direction: column;

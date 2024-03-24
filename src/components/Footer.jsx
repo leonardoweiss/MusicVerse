@@ -70,7 +70,9 @@ function Footer({music, def, value, queue, setQueue, playRef, btn, setBtn}) {
                 }}>
                     <i className={mutedBtn}></i>
                 </button>
-                <button type="button">
+                <button type="button" onClick={() => {
+                    
+                }}>
                     <i className="fa-regular fa-heart"></i>
                 </button>
             </div>

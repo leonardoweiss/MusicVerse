@@ -124,6 +124,7 @@ main{
     #reproduction-list{
         flex-grow: 0;
         height: 70vh;
+        max-width: 450px;
         padding-bottom: 3rem;
 
         #input{
@@ -291,6 +292,7 @@ main{
 
     #music-info{
         flex-grow: 1;
+        max-width: 600px;
 
         .center{
             // background-color: rgba(255, 229, 154, 0.5);
@@ -451,11 +453,16 @@ footer{
     main{
         flex-direction: column-reverse;
 
+        #reproduction-list{            
+            max-width: 10000px;
+        }
+
         #music-info{
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 0;
+            max-width: 10000px;
 
             .artist{
                 flex-direction: column;
