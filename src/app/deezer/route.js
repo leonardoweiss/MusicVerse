@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const search = await fetch('http://localhost:3000/search').then(res => res.json())
+const search = await fetch(`${process.env.NEXT_PUBLIC_APIURL}/search`).then(res => res.json())
 
 const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${search.data.search}`
 const options = {
