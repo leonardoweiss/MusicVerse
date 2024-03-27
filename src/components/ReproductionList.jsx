@@ -19,7 +19,7 @@ function ReproductionList({music, def, setQueue, playRef, setBtn}) {
                 })
                 inputRef.current.value = ''
             }}>
-                <input type="text" name="search" autoComplete="off" ref={inputRef} placeholder="Buscar..."/>
+                <input type="text" autoComplete="off" ref={inputRef} placeholder="Buscar..."/>
                 <button>
                     <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
